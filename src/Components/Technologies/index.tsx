@@ -1,4 +1,4 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -7,9 +7,16 @@ import "swiper/css/autoplay";
 
 import { Pagination, Navigation, Autoplay } from "swiper";
 
-export function Technologies() {
+interface TechnologiesProps {
+  technology: Array<{
+    image: string;
+    title: string;
+  }>;
+}
+
+export function Technologies({ technology }: TechnologiesProps) {
   return (
-    <div id="tech" className="w-full py-32 bg-zinc-800 " >
+    <div id="tech" className="w-full py-32 bg-zinc-800 ">
       <h2 className="lg:px-12 transition-all ">
         <span className="text-purple-100">&lt;</span>Tecnologias
         <span className="text-purple-100"> /&gt;</span>
@@ -19,6 +26,7 @@ export function Technologies() {
         spaceBetween={5}
         slidesPerView={"auto"}
         pagination={{ clickable: true }}
+        navigation={true}
         autoplay={true}
         loop={true}
         className={`${`w-full h-[380px] max-w-[1080px] rounded-md`}, mySwiper`}
@@ -34,35 +42,24 @@ export function Technologies() {
           },
         }}
       >
-      <SwiperSlide className="p-5 flex items-center justify-center" >
-        <section className="w-[180px] p-5 rounded-md md:hover:scale-105 transition-all " >
-          <div>
-            <img 
-              src="/images/html.svg"
-              alt="imagem do repositório"
-              className="w-full h-full object-cover rounded-sm "
-            />
-          </div>
-          <div className="text-base text-center mt-5  " >
-            <span>HTML5</span>
-          </div>
-        </section>
-      </SwiperSlide>
-      <SwiperSlide className="p-5 flex items-center justify-center" >
-        <section className="w-[180px] p-5 rounded-md md:hover:scale-105 transition-all " >
-          <div>
-            <img 
-              src="/images/css.svg"
-              alt="imagem do repositório"
-              className="w-full h-full object-cover rounded-sm "
-            />
-          </div>
-          <div className="text-base text-center mt-5  " >
-            <span>HTML5</span>
-          </div>
-        </section>
-      </SwiperSlide>
-    </Swiper>
+        {technology &&
+          technology.map((item) => (
+            <SwiperSlide key={item.title} className="p-5 px-10 flex items-center justify-center ">
+              <section className="w-[180px] p-5 rounded-md md:hover:scale-105 transition-all ">
+                <div>
+                  <img
+                    src={item.image}
+                    alt="imagem do repositório"
+                    className="w-full h-full object-cover rounded-sm "
+                  />
+                </div>
+                <div className="text-base text-center mt-5  ">
+                  <span>{item.title}</span>
+                </div>
+              </section>
+            </SwiperSlide>
+          ))}
+      </Swiper>
     </div>
-  )
+  );
 }

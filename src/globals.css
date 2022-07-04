@@ -3,13 +3,25 @@
 @tailwind utilities;
 
 html {
-  @apply scroll-smooth
+  @apply scroll-smooth;
 }
 
 body {
-  @apply bg-zinc-900 font-firasans
+  @apply bg-zinc-900 font-firasans;
+}
+
+@layer {
+  .swiper-pagination-bullet-active {
+    background-color: #9871f5 !important;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #555 !important;
+  }
+
 }
 
 h2 {
-  @apply text-4xl md:text-5xl font-firasans font-semibold text-center transition-all
+  @apply text-4xl md:text-5xl font-firasans font-semibold text-center transition-all;
 }
