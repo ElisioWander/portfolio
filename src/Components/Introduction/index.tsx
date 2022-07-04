@@ -23,7 +23,7 @@ export function Introduction() {
           </button>
           <a
             className="w-28 h-10 lg:w-40  p-1 text-base inline-flex items-center justify-center border-2 border-solid border-zinc-200 rounded hover:brightness-75 transition-all "
-            href="#"
+            href="#contact"
           >
             Contato
           </a>

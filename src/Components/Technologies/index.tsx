@@ -9,7 +9,7 @@ import { Pagination, Navigation, Autoplay } from "swiper";
 
 export function Technologies() {
   return (
-    <div id="tech" className="w-full py-14 bg-zinc-800 " >
+    <div id="tech" className="w-full py-32 bg-zinc-800 " >
       <h2 className="lg:px-12 transition-all ">
         <span className="text-purple-100">&lt;</span>Tecnologias
         <span className="text-purple-100"> /&gt;</span>

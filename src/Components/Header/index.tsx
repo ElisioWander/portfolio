@@ -4,7 +4,7 @@ export function Header() {
   const navigationStyle = `text-base ml-10 hover:brightness-75 transition-all `
 
   return (
-    <div className="w-full h-20 bg-zinc-800">
+    <div id="introduction" className="w-full h-20 bg-zinc-800">
       <header className="w-full h-full max-w-[1280px] m-auto px-4 md:px-8 flex items-center justify-between text-zinc-200 ">
         <FiMenu fontSize={32} className="md:hidden" />
         <div className="text-2xl font-semibold ">

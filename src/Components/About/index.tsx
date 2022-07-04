@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <div id="about" className="w-full py-16 px-5 bg-zinc-800 ">
+    <div id="about" className="w-full py-20 px-5 bg-zinc-800 ">
       <h2 className="lg:px-12 lg:text-start transition-all ">
         <span className="text-purple-100">&lt;</span>Sobre min
         <span className="text-purple-100"> /&gt;</span>
