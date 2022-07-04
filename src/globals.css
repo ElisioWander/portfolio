@@ -5,3 +5,7 @@
 body {
   @apply bg-zinc-900 font-firasans
 }
+
+h2 {
+  @apply text-4xl md:text-5xl font-firasans font-semibold text-center transition-all
+}
