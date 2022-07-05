@@ -1,4 +1,4 @@
-import { FiMenu } from "react-icons/fi";
+import { MenuBurger } from "../Sidebar/MenuBurger";
 
 export function Header() {
   const navigationStyle = `text-base ml-10 hover:brightness-75 transition-all `
@@ -6,7 +6,7 @@ export function Header() {
   return (
     <div id="introduction" className="w-full h-20 bg-zinc-800">
       <header className="w-full h-full max-w-[1280px] m-auto px-4 md:px-8 flex items-center justify-between text-zinc-200 ">
-        <FiMenu fontSize={32} className="md:hidden" />
+        <MenuBurger />
         <div className="text-2xl font-semibold ">
           <span className="text-purple-100">&lt;</span>Elisio Wander{" "}
           <span className="text-purple-100">/&gt;</span>
