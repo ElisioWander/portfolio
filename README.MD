@@ -47,7 +47,7 @@ localhost:3000
 
 ---
 ## 📝 Licença
-Copyright © 2020 [@ElisioWander](https://github.com/ElisioWander/feedback-wedget/blob/main/LICENSE)
+Copyright © 2020 [@ElisioWander](https://github.com/ElisioWander/portfolio/blob/main/LICENSE)
 
 Este projeto está sobe a [LICENÇA MIT](https://opensource.org/licenses/MIT)
 
