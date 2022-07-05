@@ -18,11 +18,14 @@ export function Introduction() {
         </span>
 
         <div className="mt-12 flex items-center justify-center gap-3 ">
-          <button className="w-28 h-10 lg:w-40  p-1 text-base bg-purple-100 rounded hover:brightness-75 transition-all ">
+          <a 
+            className="w-28 h-10 lg:w-40 p-1 text-base inline-flex items-center justify-center bg-purple-100 rounded hover:brightness-75 transition-all "
+            href="/images/resume-elisio-wander.pdf" download
+          >
             Download CV
-          </button>
+          </a>
           <a
-            className="w-28 h-10 lg:w-40  p-1 text-base inline-flex items-center justify-center border-2 border-solid border-zinc-200 rounded hover:brightness-75 transition-all "
+            className="w-28 h-10 lg:w-40 p-1 text-base inline-flex items-center justify-center border-2 border-solid border-zinc-200 rounded hover:brightness-75 transition-all "
             href="#contact"
           >
             Contato
