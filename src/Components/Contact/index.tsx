@@ -35,16 +35,36 @@ export function Contact() {
             pelos links abaixo ou envie uma mensagem através do formuário
           </p>
           <div className="flex gap-2 items-center justify-center transition-all ">
-            <a className={`${linkStyle}`} target="_blank" href="https://www.linkedin.com/in/elisio-wander-b88b69136/">
+            <a
+              className={`${linkStyle} `}
+              target="_blank"
+              href="https://www.linkedin.com/in/elisio-wander-b88b69136/"
+            >
+              <span className="sr-only">LinkedIn</span>
               <FaLinkedinIn fontSize={28} />
             </a>
-            <a className={`${linkStyle}`} target="_blank" href="https://github.com/ElisioWander">
+            <a
+              className={`${linkStyle}`}
+              target="_blank"
+              href="https://github.com/ElisioWander"
+            >
+              <span className="sr-only">Github</span>
               <FaGithub fontSize={28} />
             </a>
-            <a className={`${linkStyle}`} target="_blank" href="https://api.whatsapp.com/send?phone=5532999924818">
+            <a
+              className={`${linkStyle}`}
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=5532999924818"
+            >
+              <span className="sr-only">Whatsapp</span>
               <FaWhatsapp fontSize={28} />
             </a>
-            <a className={`${linkStyle}`} target="_blank" href="https://www.instagram.com/elisio_wander/">
+            <a
+              className={`${linkStyle}`}
+              target="_blank"
+              href="https://www.instagram.com/elisio_wander/"
+            >
+              <span className="sr-only">Instagram</span>
               <FaInstagram fontSize={28} />
             </a>
           </div>

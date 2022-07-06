@@ -6,7 +6,7 @@ export function Introduction() {
         alt="desenho de programador"
         className="w-40 h-40 md:w-[380px] md:h-[350px] lg:w-[487px] lg:h-[424px] md:order-2 transition-all md:animate-goBack "
       />
-      <div className="w-full py-5 text-center transition-all animate-goAhead ">
+      <div className="w-full py-5 text-center transition-all md:animate-goAhead ">
         <span className="text-xl md:text-2xl lg:text-3xl font-firasans font-normal ">
           Olá, meu nome é
         </span>

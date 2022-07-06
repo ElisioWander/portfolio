@@ -56,8 +56,9 @@ export function Form() {
       className="w-full max-w-[440px] px-5 py-14 flex flex-col "
       onSubmit={handleSubmit(handleSubmitMessage)}
     >
-      <label className={`${labelStyles}`} >Nome</label>
+      <label htmlFor="name" className={`${labelStyles}`} >Nome</label>
       <input 
+        id="name"
         type="text"
         className="mb-5 py-2 px-4 text-zinc-400 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-purple-100 rounded-md placeholder:text-sm bg-zinc-800 "
         {...register("name")}
@@ -67,8 +68,9 @@ export function Form() {
           {errors.name.message}
         </span>
       ) }
-      <label className={`${labelStyles}`} >Email</label>
+      <label htmlFor="email" className={`${labelStyles}`} >Email</label>
       <input 
+        id="email"
         type="email"
         className="mb-5 py-2 px-4 text-zinc-400 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-purple-100 rounded-md placeholder:text-sm bg-zinc-800"
         {...register("email")}
@@ -78,8 +80,9 @@ export function Form() {
           {errors.email.message}
         </span>
       ) }
-      <label className={`${labelStyles}`} >Mensagem</label>
+      <label htmlFor="comment" className={`${labelStyles}`} >Mensagem</label>
       <textarea 
+        id="comment"
         className="w-full min-h-[112px] p-3 text-sm placeholder:zinc-500 text-zinc-400 border-purple-100 bg-zinc-800 rounded-md focus:border-purple-100 focus:ring-purle-100 focus:ring-1 focus:outline-none resize-none "
         {...register("comment")}
         onChange={e => setComment(e.target.value)}

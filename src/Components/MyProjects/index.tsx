@@ -66,14 +66,15 @@ export function MyProjects({ project }: MyProjectsProps) {
                   </div>
                   <div className="mt-2 flex items-center gap-2">
                     <a 
-                      href={item.websitelink}
+                      href={`${item.websitelink}`}
                       target="_blank"
-                      className="w-4/5 h-10 p-1 text-base inline-flex items-center justify-center bg-purple-100 rounded hover:brightness-75 transition-all ">
+                      className="w-4/5 h-10 p-1 text-base inline-flex items-center justify-center bg-purple-100 rounded hover:brightness-75 transition-all "
+                    >
                       Ver site
                     </a>
                     <a
                       className="w-4/5 h-10 p-1 text-base inline-flex items-center justify-center border-2 border-solid border-zinc-200 rounded hover:brightness-75 transition-all "
-                      href={item.githublink}
+                      href={`${item.githublink}`}
                       target="_blank"
                     >
                       Github

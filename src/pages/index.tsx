@@ -7,6 +7,7 @@ import { Technologies } from "../Components/Technologies";
 import { client } from "../services/prismic";
 import Head from "next/head";
 import * as prismicH from "@prismicio/helpers"
+import { SeoPage } from "../Components/SeoPage";
 
 type ProjectData = Array<{
   slug: string;
@@ -36,9 +37,11 @@ interface HomeProps {
 export default function Home({ project, summary, technology }: HomeProps) {
   return (
     <>
-      <Head>
-        <title>Portifólio | Elisio</title>
-      </Head>
+      <SeoPage 
+        title="Home | Elisio Wander - Portfolio"
+        description="Desenvolvedor Web - Front-end HTML5, CSS3, SASS, TailwindCSS, Javascript, React, Next, Typescript" 
+        url="https://elisiowander.vercel.app" 
+      />
 
       <div className="w-full text-zinc-200 ">
         <Introduction />
