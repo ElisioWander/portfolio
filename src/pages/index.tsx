@@ -5,9 +5,8 @@ import { Introduction } from "../Components/Introduction";
 import { MyProjects } from "../Components/MyProjects";
 import { Technologies } from "../Components/Technologies";
 import { client } from "../services/prismic";
-import Head from "next/head";
-import * as prismicH from "@prismicio/helpers"
 import { SeoPage } from "../Components/SeoPage";
+import * as prismicH from "@prismicio/helpers"
 
 type ProjectData = Array<{
   slug: string;
