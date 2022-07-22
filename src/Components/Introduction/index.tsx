@@ -1,6 +1,6 @@
 export function Introduction() {
   return (
-    <div className="w-full max-w-[1080px] h-[calc(100vh-5rem)] py-8 md:px-5 md:m-auto flex flex-col md:grid md:grid-cols-2 md:gap-28 items-center ">
+    <div className="w-full max-w-[1080px] h-[calc(100vh-5rem)] py-8 md:px-5 md:m-auto flex flex-col md:grid md:grid-cols-2 md:gap-28 items-center justify-center ">
       <img
         src="/images/desenho.svg"
         alt="desenho de programador"
