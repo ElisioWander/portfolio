@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
-import { Pagination, Navigation, Autoplay } from "swiper";
+import { Pagination, Navigation, A11y } from "swiper";
 
 interface MyProjectsProps {
   project: Array<{
@@ -27,11 +27,10 @@ export function MyProjects({ project }: MyProjectsProps) {
       </h2>
 
       <Swiper
-        modules={[Pagination, Navigation, Autoplay]}
+        modules={[Pagination, Navigation, A11y]}
         spaceBetween={5}
         slidesPerView={"auto"}
         pagination={{ clickable: true }}
-        autoplay={true}
         loop={true}
         className={`${`w-full h-[500px] max-w-[1080px] rounded-md`}, mySwiper`}
         breakpoints={{

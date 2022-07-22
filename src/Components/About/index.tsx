@@ -9,7 +9,7 @@ export function About({ summary }: AboutProps) {
   return (
     <div id="about" className="w-full py-20 px-5 bg-zinc-800 ">
       <h2 className="lg:px-12 lg:text-start transition-all ">
-        <span className="text-purple-100">&lt;</span>Sobre min
+        <span className="text-purple-100">&lt;</span>Sobre mim
         <span className="text-purple-100"> /&gt;</span>
       </h2>
       <div className="lg:px-8 flex flex-col lg:flex-row lg:gap-20 items-center transition-all " >

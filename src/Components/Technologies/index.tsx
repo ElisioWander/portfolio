@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
-import { Pagination, Navigation, Autoplay } from "swiper";
+import { Pagination, Navigation, A11y } from "swiper";
 
 interface TechnologiesProps {
   technology: Array<{
@@ -22,12 +22,11 @@ export function Technologies({ technology }: TechnologiesProps) {
         <span className="text-purple-100"> /&gt;</span>
       </h2>
       <Swiper
-        modules={[Pagination, Navigation, Autoplay]}
+        modules={[Pagination, Navigation, A11y]}
         spaceBetween={5}
         slidesPerView={"auto"}
         pagination={{ clickable: true }}
         navigation={true}
-        autoplay={true}
         loop={true}
         className={`${`w-full h-[380px] max-w-[1080px] rounded-md`}, mySwiper`}
         breakpoints={{
