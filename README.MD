@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="./public/images/home.png">
+    <img src="./public/images/portfolio.gif">
 </h1>
 
 ## 🏷️ Sobre 
@@ -8,8 +8,9 @@
 ---
 
 ## 🛠️ Tecnologias e serviços utilizados
-Foram utilizadas as seguintes tecnologias para desenvolver a aplicação **portfolio** :
+Foram utilizadas as seguintes tecnologias para desenvolver a aplicação **Portfolio** :
 
+- [HTML5](https://html.com/)
 - [Next.js](https://nextjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [TailwindCSS](https://tailwindcss.com/)
@@ -44,6 +45,7 @@ localhost:3000
 
 - Linkedin: [@elisioWander](https://www.linkedin.com/in/elisio-wander-b88b69136/)
 - github: [@elisioWander](https://github.com/ElisioWander)
+- Deploy: [todo-list](https://elisiowander.vercel.app)
 
 ---
 ## 📝 Licença
