@@ -21,9 +21,10 @@ export function ModalContextProvider({ children }: ModalContextProviderProps) {
   }, [modal])
 
   async function handleOpenModal() {
-    setModal(!modal)
+    const isModalOpen = !modal
 
-    document.body.style.overflow = !modal ? "hidden" : "initial"
+    document.body.style.overflow = isModalOpen ? "hidden" : "initial"
+    setModal(isModalOpen)
 
     await new Promise(resolve => setTimeout(resolve, 2000))
     setModal(false)

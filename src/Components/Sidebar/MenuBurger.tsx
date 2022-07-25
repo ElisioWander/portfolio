@@ -7,17 +7,18 @@ export function MenuBurger() {
   
   return (
     <button 
-    onClick={handleOpenSidebar}
-    className="flex flex-col w-12 h-12 border-none items-center justify-center group z-50 md:hidden ">
-    <div className={`${genericHamburgerLine} ${
-      sidebarActive && "rotate-45 translate-y-2 opacity-50 group-hover:opacity-100"
-    }`} />
-    <div className={`${genericHamburgerLine} ${
-      sidebarActive && "opacity-0"
-    }`} />
-    <div className={`${genericHamburgerLine} ${
-      sidebarActive && "-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100"
-    } `} />
-  </button>
+      onClick={handleOpenSidebar}
+      className="flex flex-col w-12 h-12 border-none items-center justify-center group z-50 md:hidden "
+    >
+      <div className={`${genericHamburgerLine} ${
+        sidebarActive && "rotate-45 translate-y-2 opacity-50 group-hover:opacity-100"
+      }`} />
+      <div className={`${genericHamburgerLine} ${
+        sidebarActive && "opacity-0"
+      }`} />
+      <div className={`${genericHamburgerLine} ${
+        sidebarActive && "-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100"
+      } `} />
+    </button>
   )
 }

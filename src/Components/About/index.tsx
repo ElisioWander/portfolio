@@ -1,3 +1,5 @@
+import { SectionTitle } from "../SectionTitle";
+
 interface AboutProps {
   summary: {
     content: string;
@@ -8,10 +10,7 @@ interface AboutProps {
 export function About({ summary }: AboutProps) {
   return (
     <div id="about" className="w-full py-20 px-5 bg-zinc-800 ">
-      <h2 className="lg:px-12 lg:text-start transition-all ">
-        <span className="text-purple-100">&lt;</span>Sobre mim
-        <span className="text-purple-100"> /&gt;</span>
-      </h2>
+      <SectionTitle title="Sobre mim" />
       <div className="lg:px-8 flex flex-col lg:flex-row lg:gap-20 items-center transition-all " >
         <div className="w-[220px] h-[220px] md:w-[320px] md:h-[320px] mt-10 mb-10 lg:m-auto flex items-center justify-center lg:order-2 rounded-full border-4 border-zinc-200 hover:border-green-300 transition-all ">
           <img
@@ -32,5 +31,3 @@ export function About({ summary }: AboutProps) {
     </div>
   );
 }
-
-{/* <a className="text-purple-100 hover:underline underline-offset-2 " target="_blank" href="https://app.rocketseat.com.br">Rocketseat</a> */}

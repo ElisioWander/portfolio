@@ -1,8 +1,9 @@
 import { createContext, ReactElement, useContext, useState } from "react";
 
 type SidebarContextData = {
-  handleOpenSidebar: () => void;
   sidebarActive: boolean;
+  handleCloseSidebar: () => void;
+  handleOpenSidebar: () => void;
 }
 
 interface SidebarContextProviderProps {
@@ -15,15 +16,21 @@ export function SidebarContextProvider({ children }: SidebarContextProviderProps
   const [sidebarActive, setSidebarActive] = useState(false)
 
   function handleOpenSidebar() {
-    !sidebarActive
+    const toggleSidebar = !sidebarActive
+    document.body.style.overflow = "hidden"
 
-    document.body.style.overflow = !sidebarActive ? "hidden" : "initial"
+    setSidebarActive(toggleSidebar)
+  }
 
-    setSidebarActive(!sidebarActive)
+  function handleCloseSidebar() {
+    const closeSidebar = false
+    document.body.style.overflow = "initial"
+
+    setSidebarActive(closeSidebar)
   }
 
   return (
-    <SidebarContext.Provider value={{handleOpenSidebar, sidebarActive}} >
+    <SidebarContext.Provider value={{handleOpenSidebar, handleCloseSidebar, sidebarActive}} >
       { children }
     </SidebarContext.Provider>
   )

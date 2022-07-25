@@ -20,7 +20,7 @@ export function Introduction() {
         <div className="mt-12 flex items-center justify-center gap-3 ">
           <a 
             className="w-28 h-10 lg:w-40 p-1 text-base inline-flex items-center justify-center bg-purple-100 rounded hover:brightness-75 transition-all "
-            href="/images/elisiowander-resume.pdf" download
+            href="/images/cv-elisiowander.pdf" download
           >
             Download CV
           </a>

@@ -26,7 +26,7 @@ export default async function sendMessage(req: NextApiRequest, res:NextApiRespon
         `<div style="font-family: sans-serif"; font-size: 16px; color: #111; >`,
         `<p>Nome: ${name}</p>`,
         `<p>email: ${email}</p>`,
-        `<p>email: ${comment}</p>`,
+        `<p>Mensagem: ${comment}</p>`,
         `</div>`
       ].join('\n')
     })
