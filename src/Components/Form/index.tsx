@@ -1,4 +1,3 @@
-import { ChangeEvent, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useModal } from "../../context/modalContext";
 import { api } from "../../services/axios";
@@ -13,20 +12,15 @@ type SendMessageData = {
 };
 
 export function Form() {
-  const [comment, setComment] = useState("");
-
   const { handleOpenModal } = useModal();
 
   const {
     register,
     handleSubmit,
     reset,
+    watch,
     formState: { errors, isSubmitting },
   } = useForm({ resolver });
-
-  function handleGetTextareaValue(event: ChangeEvent<HTMLTextAreaElement>) {
-    setComment(event.target.value)
-  }
 
   const handleSubmitMessage: SubmitHandler<SendMessageData> = async (
     values
@@ -40,13 +34,13 @@ export function Form() {
     });
 
     handleOpenModal();
-    //form fields reset
     reset();
-    setComment("");
   };
 
+  const messageField = watch('comment')
+
   const loadingWhileSubmitting = isSubmitting ? <Loading /> : "Enviar";
-  const isTextareaEmpty = comment.length === 0 || isSubmitting;
+  const isSubmitDisabled = !messageField || isSubmitting;
 
   return (
     <form
@@ -74,13 +68,12 @@ export function Form() {
         id="comment"
         className="w-full min-h-[112px] p-3 text-sm placeholder:zinc-500 text-zinc-400 border-purple-100 bg-zinc-800 rounded-md focus:border-purple-100 focus:ring-purle-100 focus:ring-1 focus:outline-none resize-none "
         {...register("comment")}
-        onChange={handleGetTextareaValue}
       />
 
       <button
         type="submit"
         className="w-28 h-10 lg:w-40 mt-6 p-1 flex items-center justify-center text-base bg-purple-100 rounded hover:brightness-75 transition-all disabled:opacity-70 disabled:hover:brightness-100 disabled:cursor-not-allowed "
-        disabled={isTextareaEmpty}
+        disabled={isSubmitDisabled}
       >
         {loadingWhileSubmitting}
       </button>
