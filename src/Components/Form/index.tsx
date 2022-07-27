@@ -2,8 +2,8 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useModal } from "../../context/modalContext";
 import { api } from "../../services/axios";
 import { Loading } from "./Loading";
-import { resolver } from "../../hooks/useResolver";
 import { Input } from "./Input";
+import { useFormResolver } from "../../hooks/useFormResolver";
 
 type SendMessageData = {
   name: string;
@@ -13,6 +13,7 @@ type SendMessageData = {
 
 export function Form() {
   const { handleOpenModal } = useModal();
+  const { resolver } = useFormResolver()
 
   const {
     register,
