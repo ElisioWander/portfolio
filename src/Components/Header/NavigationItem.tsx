@@ -1,7 +1,7 @@
 interface NavigationItemProps {
-  url: string;
-  name: string;
-  contactButton?: string;
+  url: string
+  name: string
+  contactButton?: string
 }
 
 export function NavigationItem({
@@ -9,11 +9,11 @@ export function NavigationItem({
   url,
   contactButton,
 }: NavigationItemProps) {
-  const navigationStyle = `text-base ml-10 hover:brightness-75 transition-all `;
+  const navigationStyle = `text-base ml-10 hover:brightness-75 transition-all `
 
   return (
     <a className={`${navigationStyle} ${contactButton}`} href={url}>
       {name}
     </a>
-  );
+  )
 }

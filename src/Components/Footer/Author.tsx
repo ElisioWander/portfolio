@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 interface AuthorProps {
-  title: string;
-  children: ReactNode;
+  title: string
+  children: ReactNode
 }
 
 export function Author({ children, title }: AuthorProps) {
@@ -12,5 +12,5 @@ export function Author({ children, title }: AuthorProps) {
 
       {children}
     </details>
-  );
+  )
 }

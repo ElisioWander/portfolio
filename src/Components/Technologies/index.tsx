@@ -1,18 +1,20 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react'
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/autoplay";
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import 'swiper/css/autoplay'
 
-import { Pagination, Navigation, A11y } from "swiper";
-import { SectionTitle } from "../SectionTitle";
+import { Pagination, Navigation, A11y } from 'swiper'
+import { SectionTitle } from '../SectionTitle'
+
+type Technology = {
+  image: string
+  title: string
+}
 
 interface TechnologiesProps {
-  technology: Array<{
-    image: string;
-    title: string;
-  }>;
+  technology: Technology[]
 }
 
 export function Technologies({ technology }: TechnologiesProps) {
@@ -23,7 +25,7 @@ export function Technologies({ technology }: TechnologiesProps) {
       <Swiper
         modules={[Pagination, Navigation, A11y]}
         spaceBetween={5}
-        slidesPerView={"auto"}
+        slidesPerView={'auto'}
         pagination={{ clickable: true }}
         navigation={true}
         loop={true}
@@ -61,5 +63,5 @@ export function Technologies({ technology }: TechnologiesProps) {
         ))}
       </Swiper>
     </div>
-  );
+  )
 }

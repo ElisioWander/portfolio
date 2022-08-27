@@ -1,21 +1,21 @@
-import { NextSeo } from "next-seo";
+import { NextSeo } from 'next-seo'
 
 interface SeoPageProps {
-  title: string;
-  description: string;
-  url?: string;
+  title: string
+  description: string
+  url?: string
 }
 
 export function SeoPage({ description, title, url }: SeoPageProps) {
   return (
     <div>
-      <NextSeo 
+      <NextSeo
         title={title}
         description={description}
         canonical={url}
         openGraph={{
           url,
-          title
+          title,
         }}
       />
     </div>

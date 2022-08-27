@@ -1,9 +1,9 @@
-import { useSidebar } from "../../context/SidebarContext";
-import { Navigation } from "./Navigation";
-import { NavigationItem } from "./NavigationItem";
+import { useSidebar } from '../../context/SidebarContext'
+import { Navigation } from './Navigation'
+import { NavigationItem } from './NavigationItem'
 
 export function Sidebar() {
-  const { sidebarActive } = useSidebar();
+  const { sidebarActive } = useSidebar()
 
   if (sidebarActive) {
     return (
@@ -17,8 +17,8 @@ export function Sidebar() {
           </Navigation>
         </div>
       </div>
-    );
+    )
   } else {
     return <></>
-  };
+  }
 }

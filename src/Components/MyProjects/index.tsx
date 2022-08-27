@@ -1,22 +1,24 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react'
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/autoplay";
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import 'swiper/css/autoplay'
 
-import { Pagination, Navigation, A11y } from "swiper";
-import { SectionTitle } from "../SectionTitle";
+import { Pagination, Navigation, A11y } from 'swiper'
+import { SectionTitle } from '../SectionTitle'
+
+type Project = {
+  slug: string
+  image: string
+  content: string
+  technologies: string
+  websitelink: string
+  githublink: string
+}
 
 interface MyProjectsProps {
-  project: Array<{
-    slug: string;
-    image: string;
-    content: string;
-    technologies: string;
-    websitelink: string;
-    githublink: string;
-  }>;
+  project: Project[]
 }
 
 export function MyProjects({ project }: MyProjectsProps) {
@@ -27,7 +29,7 @@ export function MyProjects({ project }: MyProjectsProps) {
       <Swiper
         modules={[Pagination, Navigation, A11y]}
         spaceBetween={5}
-        slidesPerView={"auto"}
+        slidesPerView={'auto'}
         pagination={{ clickable: true }}
         loop={true}
         className={`${`w-full h-[500px] max-w-[1080px] rounded-md`}, mySwiper`}
@@ -48,7 +50,7 @@ export function MyProjects({ project }: MyProjectsProps) {
             key={item.slug}
             className="p-5 flex items-center justify-center"
           >
-            <section className="w-[400px] p-5 bg-zinc-800 rounded-md shadow-md md:hover:scale-105 md:hover:shadow-lg transition-all md:hover:border-2 border-transparent md:hover:border-purple-100 ">
+            <section className="w-[400px] p-5 bg-zinc-800 rounded-md shadow-md md:hover:scale-105 md:hover:shadow-lg transition-all border-2 border-transparent md:hover:border-2 md:hover:border-purple-100 ">
               <header>
                 <img
                   src={item.image}
@@ -66,6 +68,7 @@ export function MyProjects({ project }: MyProjectsProps) {
                     href={`${item.websitelink}`}
                     target="_blank"
                     className="w-4/5 h-10 p-1 text-base inline-flex items-center justify-center bg-purple-100 rounded hover:brightness-75 transition-all "
+                    rel="noreferrer"
                   >
                     Ver site
                   </a>
@@ -73,6 +76,7 @@ export function MyProjects({ project }: MyProjectsProps) {
                     className="w-4/5 h-10 p-1 text-base inline-flex items-center justify-center border-2 border-solid border-zinc-200 rounded hover:brightness-75 transition-all "
                     href={`${item.githublink}`}
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Github
                   </a>
@@ -83,5 +87,5 @@ export function MyProjects({ project }: MyProjectsProps) {
         ))}
       </Swiper>
     </div>
-  );
+  )
 }

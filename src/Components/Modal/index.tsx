@@ -1,8 +1,8 @@
-import { AiOutlineCheck } from "react-icons/ai";
-import { useModal } from "../../context/modalContext";
+import { AiOutlineCheck } from 'react-icons/ai'
+import { useModal } from '../../context/modalContext'
 
 export function Modal() {
-  const { modal } = useModal();
+  const { modal } = useModal()
 
   if (modal) {
     return (

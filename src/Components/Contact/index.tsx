@@ -1,13 +1,8 @@
-import {
-  FaLinkedinIn,
-  FaGithub,
-  FaWhatsapp,
-  FaInstagram,
-} from "react-icons/fa";
-import { Form } from "../Form";
-import { Modal } from "../Modal";
-import { SectionTitle } from "../SectionTitle";
-import { SocialMediaLink } from "../SocialMediaLink";
+import { FaLinkedinIn, FaGithub, FaWhatsapp, FaInstagram } from 'react-icons/fa'
+import { Form } from '../Form'
+import { Modal } from '../Modal'
+import { SectionTitle } from '../SectionTitle'
+import { SocialMediaLink } from '../SocialMediaLink'
 
 export function Contact() {
   return (
@@ -54,5 +49,5 @@ export function Contact() {
 
       <Modal />
     </div>
-  );
+  )
 }

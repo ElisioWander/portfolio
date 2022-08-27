@@ -1,38 +1,44 @@
-import { createContext, ReactElement, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  ReactElement,
+  useContext,
+  useEffect,
+  useState,
+} from 'react'
 
 interface ModalContextProviderProps {
-  children: ReactElement;
+  children: ReactElement
 }
 
 type ModalContextData = {
-  handleOpenModal: () => void;
-  modal: boolean;
+  handleOpenModal: () => void
+  modal: boolean
 }
 
-export const ModalContext = createContext({} as ModalContextData )
+export const ModalContext = createContext({} as ModalContextData)
 
 export function ModalContextProvider({ children }: ModalContextProviderProps) {
   const [modal, setModal] = useState(false)
 
   useEffect(() => {
-    if(modal === false) {
-      document.body.style.overflow = "initial"
+    if (modal === false) {
+      document.body.style.overflow = 'initial'
     }
   }, [modal])
 
   async function handleOpenModal() {
     const isModalOpen = !modal
 
-    document.body.style.overflow = isModalOpen ? "hidden" : "initial"
+    document.body.style.overflow = isModalOpen ? 'hidden' : 'initial'
     setModal(isModalOpen)
 
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    await new Promise((resolve) => setTimeout(resolve, 2000))
     setModal(false)
   }
 
   return (
     <ModalContext.Provider value={{ handleOpenModal, modal }}>
-      { children }
+      {children}
     </ModalContext.Provider>
   )
 }

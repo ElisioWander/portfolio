@@ -18,9 +18,10 @@ export function Introduction() {
         </span>
 
         <div className="mt-12 flex items-center justify-center gap-3 ">
-          <a 
+          <a
             className="w-28 h-10 lg:w-40 p-1 text-base inline-flex items-center justify-center bg-purple-100 rounded hover:brightness-75 transition-all "
-            href="/images/elisioWander-resume.pdf" download
+            href="/images/elisioWander-resume.pdf"
+            download
           >
             Download CV
           </a>
@@ -33,5 +34,5 @@ export function Introduction() {
         </div>
       </div>
     </div>
-  );
+  )
 }

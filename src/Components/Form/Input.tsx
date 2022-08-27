@@ -1,15 +1,15 @@
-import { forwardRef, ForwardRefRenderFunction } from "react";
-import { FieldError } from "react-hook-form";
+import { forwardRef, ForwardRefRenderFunction } from 'react'
+import { FieldError } from 'react-hook-form'
 
 interface InputBaseProps {
-  type: string;
-  label: string;
-  error?: FieldError;
+  type: string
+  label: string
+  error?: FieldError
 }
 
 const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputBaseProps> = (
   { label, type, error, ...rest },
-  ref
+  ref,
 ) => {
   return (
     <div className="flex flex-col gap-1">
@@ -28,7 +28,7 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputBaseProps> = (
         </span>
       )}
     </div>
-  );
-};
+  )
+}
 
-export const Input = forwardRef(InputBase);
+export const Input = forwardRef(InputBase)

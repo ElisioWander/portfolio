@@ -1,10 +1,10 @@
 interface SectionTitleProps {
-  title: string;
-  style?: string;
+  title: string
+  style?: string
 }
 
 export function SectionTitle({ title, style }: SectionTitleProps) {
-  const defaultStyle = `lg:px-12 lg:text-start transition-all`;
+  const defaultStyle = `lg:px-12 lg:text-start transition-all`
 
   return (
     <h2 className={!style ? defaultStyle : style}>
@@ -12,5 +12,5 @@ export function SectionTitle({ title, style }: SectionTitleProps) {
       {title}
       <span className="text-purple-100"> /&gt;</span>
     </h2>
-  );
+  )
 }

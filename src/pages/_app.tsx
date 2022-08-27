@@ -6,25 +6,23 @@ import { PrismicProvider } from '@prismicio/react'
 import { client } from '../services/prismic'
 import { ModalContextProvider } from '../context/modalContext'
 import { Sidebar } from '../Components/Sidebar'
+import { SidebarContextProvider } from '../context/SidebarContext'
 
 import '../globals.css'
-import { SidebarContextProvider } from '../context/SidebarContext'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <SidebarContextProvider>
+    <SidebarContextProvider>
       <ModalContextProvider>
-      <PrismicProvider client={client} >
-        <Header  />
-        <Sidebar />
-        <Component {...pageProps} />
-        <Footer />
-        <GoTop />
-      </PrismicProvider>
+        <PrismicProvider client={client}>
+          <Header />
+          <Sidebar />
+          <Component {...pageProps} />
+          <Footer />
+          <GoTop />
+        </PrismicProvider>
       </ModalContextProvider>
-      </SidebarContextProvider>
-    </>
+    </SidebarContextProvider>
   )
 }
 
