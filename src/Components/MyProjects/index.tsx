@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
+import Image from 'next/future/image'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -52,10 +53,11 @@ export function MyProjects({ project }: MyProjectsProps) {
           >
             <section className="w-[400px] p-5 bg-zinc-800 rounded-md shadow-md md:hover:scale-105 md:hover:shadow-lg transition-all border-2 border-transparent md:hover:border-2 md:hover:border-purple-100 ">
               <header>
-                <img
+                <Image
                   src={item.image}
                   alt="imagem do repositório"
                   className="w-full h-full object-cover rounded-sm "
+                  width={400}
                 />
               </header>
               <main className="text-base md:text-sm  ">
