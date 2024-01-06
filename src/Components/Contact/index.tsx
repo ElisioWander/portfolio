@@ -36,7 +36,7 @@ export function Contact() {
               icon={<FaGithub fontSize={28} />}
             />
             <SocialMediaLink
-              url="https://api.whatsapp.com/send?phone=5532999924818"
+              url="https://api.whatsapp.com/send?phone=5532999847074"
               icon={<FaWhatsapp fontSize={28} />}
             />
             <SocialMediaLink
