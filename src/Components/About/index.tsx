@@ -1,8 +1,9 @@
+import { CuriosityData } from '../../pages'
 import { SectionTitle } from '../SectionTitle'
 
 type Summary = {
   content: string
-  curiosity: string
+  curiosity: CuriosityData[]
 }
 
 interface AboutProps {
@@ -27,7 +28,11 @@ export function About({ summary }: AboutProps) {
           <h3 className="mt-8 mb-2 text-lg md:text-2xl font-semibold before:w-[10px] before:h-[10px] before:mr-2 before:bg-purple-100 before:inline-flex before:rounded-full  ">
             Curiosidade
           </h3>
-          <p>{summary.curiosity}</p>
+          <ul className="list-disc ml-5">
+            {summary.curiosity.map((item) => (
+              <li key={item.text}>{item.text}</li>
+            ))}
+          </ul>
         </summary>
       </div>
     </div>

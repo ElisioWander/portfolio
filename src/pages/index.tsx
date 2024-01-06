@@ -17,9 +17,15 @@ type ProjectData = {
   githublink: string
 }
 
+export type CuriosityData = {
+  type: string
+  text: string
+  span: []
+}
+
 type SummaryData = {
   content: string
-  curiosity: string
+  curiosity: CuriosityData[]
 }
 
 type TechnologyData = {
@@ -58,9 +64,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const projects = await client.getAllByType('project')
   const technologies = await client.getAllByType('technology')
 
+  console.log(summaryResponse.data.curiosity)
+
   const summary = {
     content: prismicH.asText(summaryResponse.data.content),
-    curiosity: prismicH.asText(summaryResponse.data.curiosity),
+    curiosity: summaryResponse.data.curiosity,
   }
 
   const project = projects.map((item) => {

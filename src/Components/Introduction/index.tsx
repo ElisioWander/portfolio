@@ -13,9 +13,7 @@ export function Introduction() {
         <div className="mt-2 mb-1 text-4xl md:text-5xl lg:text-7xl font-firasans font-semibold transition-all ">
           Elisio <span className="text-purple-100">Wander</span>
         </div>
-        <span className="text-xl font-medium ">
-          Desenvolvedor Web <strong className="font-semibold">Front-End</strong>
-        </span>
+        <span className="text-xl font-medium ">Desenvolvedor Web</span>
 
         <div className="mt-12 flex items-center justify-center gap-3 ">
           <a
